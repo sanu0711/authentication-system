@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Home
+{% endblock title %}
+
+{% block main %}
+<div class="container mt-2">
+    <h1> Authentication System Using Django Built-in Auth (django.contrib.auth.urls) </h1>
+    <p> This is a simple authentication system built using Django's built-in authentication system. </p>
+    <a href="{% url 'login' %}" class="btn btn-link">login</a>
+    <a href="{% url 'logout' %}" class="btn btn-link">logout</a>
+    <a href="{% url 'password_change' %}" class="btn btn-link">Change Password</a>
+    <a href="{% url 'password_reset' %}" class="btn btn-link">Reset Password</a>
+
+
+
+    <h1> Authentication System Using Django Built-in Auth (Custom) </h1>
+    <p> This is a simple authentication system built using Django's built-in authentication system. </p>
+    <a href="{% url 'sign_up' %}" class="btn btn-link">Sign Up</a>
+    <a href="{% url 'sign_in' %}" class="btn btn-link">Sign In</a>
+    <a href="{% url 'change_password' %}" class="btn btn-link">Change Password</a>
+    <a href="{% url 'sign_out' %}" class="btn btn-link">Sign Out</a>
+</div>
+{% endblock main %}
